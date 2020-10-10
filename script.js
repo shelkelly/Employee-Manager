@@ -70,4 +70,22 @@ function promptUser() {
 
 promptUser();
 
+function addDepartment() {
+    inquirer
+    .prompt ([
+        {
+            type: "input",
+            name: "deptName",
+            message: "Enter Department Name: "
+        }
+    ])
+    .then(function(answer) {
+        connection.query("INSERT INTO department (name) VALUES (?)", [answer.deptName], function(err, res) {
+            if (err) throw err;
+            console.table(res)
+            promptUser()
+        })
+    })
+}
+
 
