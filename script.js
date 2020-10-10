@@ -179,11 +179,20 @@ function updateEmployee() {
     .prompt([
         {
             type: "input",
-            name: "nameSearch",
+            name: "employeeID",
             message: "Enter Employee's ID: "
+        },
+        {
+           type: "input",
+           name: "newRoleID",
+           message: "Enter Employee's New Role ID: " 
         }
     ])
     .then(function(answer) {
-        connection.query("SELECT ? FROM ")
+        connection.query("UPDATE employee SET role_id = ? WHERE id = ?", [answer.newRoleID, answer.employeeID], function(err, res) {
+            if (err) throw err;
+            console.table(res);
+            promptUser();
+        })
     })
 }
