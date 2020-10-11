@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
->This is a system that allows you to quickly enter employee, role and department data. It also allows you to view all data within specified tables. If an employee changes their role within the company, then this program will also take you through the steps to update their information.
+>This is a system that allows you to quickly enter employee, role and department data. It also allows you to view all data within specified tables. If an employee changes their role within the company, or is under different management, then this program will also take you through the steps to update their information. A search by manager ID function is also available for use.
 
 ## Table of Contents
 >
